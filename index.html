@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chandru T — Cyber Security Terminal Portfolio</title>
+<meta name="description" content="Interactive terminal-style cyber security portfolio of Chandru T — projects, skills, resume, certifications, contact." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="scanlines"></div>
+
+<main class="terminal" id="terminal">
+  <header class="bar">
+    <div class="dots"><span></span><span></span><span></span></div>
+    <div class="title">root@chandru-soc: ~/portfolio</div>
+    <div class="status"><span class="dot-live"></span> SECURE SHELL</div>
+  </header>
+
+  <section class="screen" id="screen">
+    <pre class="boot" id="boot"></pre>
+
+    <div class="banner" id="banner" hidden>
+<pre class="ascii">
+  ____ _   _    _    _   _ ____  ____  _   _   _____
+ / ___| | | |  / \  | \ | |  _ \|  _ \| | | | |_   _|
+| |   | |_| | / _ \ |  \| | | | | |_) | | | |   | |
+| |___|  _  |/ ___ \| |\  | |_| |  _ &lt;| |_| |   | |
+ \____|_| |_/_/   \_\_| \_|____/|_| \_\\___/    |_|
+</pre>
+      <div class="hero">
+        <div class="frame">
+          <img src="assets/profile.jpeg" alt="Chandru T" />
+          <div class="ring"></div>
+        </div>
+        <div class="who">
+          <div class="line">&gt; whoami</div>
+          <h1>Chandru T</h1>
+          <p class="role">Cyber Security Analyst · SOC  Analyst</p>
+          <p class="meta">B.E. CSE (Cyber Security) · KSRIET · 2023–2027</p>
+          <ul class="tags">
+            <li>Splunk</li><li>Nmap</li><li>Wireshark</li><li>Burp Suite</li><li>Python</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-wrap">
+        <div class="prompt">root@chandru-soc:~$ <span class="cmd">cat menu.txt</span></div>
+        <div class="menu">
+          <p class="menu-title">══════ SELECT AN OPERATION ══════</p>
+          <button class="menu-item" data-target="about">
+            <span class="num">[1]</span><span class="lbl">About Chandru</span><span class="desc">Operator profile &amp; education</span>
+          </button>
+          <button class="menu-item" data-target="projects">
+            <span class="num">[2]</span><span class="lbl">Projects</span><span class="desc">Evidence files &amp; case studies</span>
+          </button>
+          <button class="menu-item" data-target="skills">
+            <span class="num">[3]</span><span class="lbl">Skills</span><span class="desc">Technical arsenal &amp; tools</span>
+          </button>
+          <button class="menu-item" data-target="resume">
+            <span class="num">[4]</span><span class="lbl">Resume</span><span class="desc">Download personnel file</span>
+          </button>
+          <button class="menu-item" data-target="internships">
+            <span class="num">[5]</span><span class="lbl">Internships</span><span class="desc">Field experience &amp; training</span>
+          </button>
+          <button class="menu-item" data-target="certs">
+            <span class="num">[6]</span><span class="lbl">Certifications</span><span class="desc">Security clearances</span>
+          </button>
+          <button class="menu-item" data-target="contact">
+            <span class="num">[7]</span><span class="lbl">Contact</span><span class="desc">Secure communication channels</span>
+          </button>
+          <p class="hint">› Click an option or press <kbd>1</kbd>–<kbd>7</kbd> on your keyboard. Press <kbd>0</kbd> to return.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============== PANELS ============== -->
+    <div class="panel" id="panel-projects" hidden>
+      <div class="prompt">root@chandru-soc:~$ <span class="cmd">ls -la ./projects/</span></div>
+      <h2>// PROJECTS</h2>
+
+      <article class="card">
+        <div class="card-head"><span class="tag">CASE-01</span><h3>Adaptive Intrusion MFA System</h3></div>
+        <ul>
+          <li>Designed an MFA system using RFID + password validation.</li>
+          <li>Adaptive security that escalates restrictions on failed logins.</li>
+          <li>LED + buzzer alerts for real-time intrusion notification.</li>
+          <li>Risk-based lockouts ranging 1–5 minutes.</li>
+        </ul>
+        <div class="chips"><span>RFID</span><span>Embedded</span><span>Security</span></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head"><span class="tag">CASE-02</span><h3>End-to-End SOC Investigation — Splunk</h3></div>
+        <ul>
+          <li>Log collection, analysis &amp; correlation with Splunk SIEM.</li>
+          <li>Investigated auth anomalies and suspicious activities.</li>
+          <li>Built dashboards, reports and custom alerts.</li>
+          <li>Threat hunting using real-world attack scenarios.</li>
+        </ul>
+        <div class="chips"><span>Splunk</span><span>SIEM</span><span>Threat Hunting</span></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head"><span class="tag">CASE-03</span><h3>Malicious URL Detector — Machine Learning</h3></div>
+        <ul>
+          <li>TF-IDF features + Naive Bayes URL classification.</li>
+          <li>Flask REST API for real-time URL analysis.</li>
+          <li>Chrome Extension for instant security checks.</li>
+          <li>Enhanced phishing detection &amp; user awareness.</li>
+        </ul>
+        <div class="chips"><span>Python</span><span>Flask</span><span>ML</span><span>Chrome Ext</span></div>
+      </article>
+
+      <button class="back">‹ [0] Return to Menu</button>
+    </div>
+
+    <div class="panel" id="panel-skills" hidden>
+      <div class="prompt">root@chandru-soc:~$ <span class="cmd">nmap -sV ./skills</span></div>
+      <h2>// TECHNICAL ARSENAL</h2>
+      <div class="skill-grid">
+        <div class="skill-block"><h4>Programming</h4><ul><li>Java</li><li>Python</li></ul></div>
+        <div class="skill-block"><h4>Web</h4><ul><li>HTML</li><li>CSS</li></ul></div>
+        <div class="skill-block"><h4>Database</h4><ul><li>MySQL</li></ul></div>
+        <div class="skill-block"><h4>Security Tools</h4><ul><li>Nmap</li><li>Wireshark</li><li>Burp Suite</li><li>Splunk</li><li>Git</li></ul></div>
+        <div class="skill-block full"><h4>Core Concepts</h4><ul class="row"><li>Penetration Testing</li><li>Vulnerability Assessment</li><li>Network Security</li><li>SIEM</li><li>Threat Analysis</li><li>Ethical Hacking</li></ul></div>
+      </div>
+
+      <div class="bars">
+        <div class="bar-row"><span>Splunk / SIEM</span><div class="bar"><i style="--w:90%"></i></div></div>
+        <div class="bar-row"><span>Penetration Testing</span><div class="bar"><i style="--w:80%"></i></div></div>
+        <div class="bar-row"><span>Python</span><div class="bar"><i style="--w:80%"></i></div></div>
+        <div class="bar-row"><span>Network Security</span><div class="bar"><i style="--w:75%"></i></div></div>
+        <div class="bar-row"><span>Nmap / Wireshark</span><div class="bar"><i style="--w:85%"></i></div></div>
+      </div>
+      <button class="back">‹ [0] Return to Menu</button>
+    </div>
+
+    <div class="panel" id="panel-resume" hidden>
+      <div class="prompt">root@chandru-soc:~$ <span class="cmd">open personnel_file.pdf</span></div>
+      <h2>// PERSONNEL FILE</h2>
+      <div class="resume-card">
+        <div class="resume-meta">
+          <p><strong>Name:</strong> Chandru T</p>
+          <p><strong>Specialization:</strong> Cyber Security</p>
+          <p><strong>Status:</strong> <span class="ok">ACTIVE</span></p>
+          <p><strong>Document:</strong> Chandru_T_Resume.pdf</p>
+        </div>
+        <div class="resume-actions">
+          <a class="btn primary" href="assets/Chandru_T_Resume.pdf" target="_blank" rel="noopener">View Resume</a>
+          <a class="btn" href="assets/Chandru_T_Resume.pdf" download>Download PDF</a>
+        </div>
+      </div>
+      <button class="back">‹ [0] Return to Menu</button>
+    </div>
+
+    <div class="panel" id="panel-certs" hidden>
+      <div class="prompt">root@chandru-soc:~$ <span class="cmd">cat certifications.log</span></div>
+      <h2>// SECURITY CLEARANCES</h2>
+      <ul class="cert-list">
+        <li><span class="cert-id">CERT-01</span><div><strong>NPTEL Swayam</strong><p>Introduction to Industry 4.0 and Industrial IoT — <em>Elite + Silver</em></p></div></li>
+        <li><span class="cert-id">CERT-02</span><div><strong>Red Team Leaders</strong><p>Certified Red Team Operation Management (CTROM)</p></div></li>
+        <li><span class="cert-id">CERT-03</span><div><strong>Cappriciosec University</strong><p>Cybersecurity Security &amp; Ethical Hacking</p></div></li>
+        <li><span class="cert-id">CERT-04</span><div><strong>EduSkills</strong><p>Ethical Hacking Virtual Internship</p></div></li>
+        <li><span class="cert-id">CERT-05</span><div><strong>Forage</strong><p>Cybersecurity Analyst Job Simulation</p></div></li>
+      </ul>
+      <button class="back">‹ [0] Return to Menu</button>
+    </div>
+
+    <div class="panel" id="panel-internships" hidden>
+      <div class="prompt">root@chandru-soc:~$ <span class="cmd">cat internships.log</span></div>
+      <h2>// INTERNSHIPS &amp; FIELD EXPERIENCE</h2>
+      <ul class="cert-list">
+        <li><span class="cert-id">OPS-01</span><div><strong>Pargavan Cyber Solution</strong> — <em>Jul 2025</em><p>VAPT on web apps &amp; networks, OSINT, recon, mitigation strategies, cloud security fundamentals.</p></div></li>
+        <li><span class="cert-id">OPS-02</span><div><strong>United Soft Tech</strong> — <em>Jun 2024</em><p>Machine Learning &amp; Deep Learning training, AI-driven analysis, AI in cybersecurity automation.</p></div></li>
+      </ul>
+      <button class="back">‹ [0] Return to Menu</button>
+    </div>
+
+    <div class="panel" id="panel-contact" hidden>
+      <div class="prompt">root@chandru-soc:~$ <span class="cmd">./establish_secure_channel</span></div>
+      <h2>// SECURE COMMUNICATIONS</h2>
+      <div class="contact-grid">
+        <a class="contact" href="mailto:chandruthanjan1@gmail.com">
+          <span class="ic">✉</span><div><strong>Email</strong><p>chandruthanjan1@gmail.com</p></div>
+        </a>
+        <a class="contact" href="tel:+919655783485">
+          <span class="ic">☏</span><div><strong>Phone</strong><p>+91 96557 83485</p></div>
+        </a>
+        <a class="contact" href="https://github.com/Chandru0015" target="_blank" rel="noopener">
+          <span class="ic">{ }</span><div><strong>GitHub</strong><p>github.com/Chandru0015</p></div>
+        </a>
+        <a class="contact" href="https://linkedin.com/in/chandru-t-478498292" target="_blank" rel="noopener">
+          <span class="ic">in</span><div><strong>LinkedIn</strong><p>linkedin.com/in/chandru-t-478498292</p></div>
+        </a>
+      </div>
+      <button class="back">‹ [0] Return to Menu</button>
+    </div>
+
+    <div class="panel" id="panel-about" hidden>
+      <div class="prompt">root@chandru-soc:~$ <span class="cmd">cat about_chandru.md</span></div>
+      <h2>// ABOUT CHANDRU</h2>
+      <p class="about-lead">
+        Cyber Security undergraduate with strong knowledge in network security, ethical hacking,
+        penetration testing, threat analysis, and SIEM technologies. Passionate about securing
+        digital assets, identifying vulnerabilities, and implementing effective security solutions
+        through continuous learning and hands-on projects.
+      </p>
+
+      <h3 class="sub">// EDUCATION</h3>
+      <ul class="edu-list">
+        <li>
+          <strong>B.E. Computer Science &amp; Engineering (Cyber Security)</strong>
+          <p>KSR Institute for Engineering and Technology · 2023–2027</p>
+        </li>
+        <li>
+          <strong>Higher Secondary Certificate (HSC)</strong>
+          <p>Brindavan Matric Hr. Sec. School · 2022–2023 · 71.5%</p>
+        </li>
+        <li>
+          <strong>Secondary School Leaving Certificate (SSLC)</strong>
+          <p>Brindavan Matric Hr. Sec. School · 2020–2021 · Pass</p>
+        </li>
+      </ul>
+
+      <div class="quote">“Defending systems, one log at a time.”</div>
+      <button class="back">‹ [0] Return to Menu</button>
+    </div>
+  </section>
+
+  <footer class="footbar">
+    <span>© <span id="yr"></span> Chandru T · Cyber Security Portfolio</span>
+    <span class="clock" id="clock">--:--:--</span>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
